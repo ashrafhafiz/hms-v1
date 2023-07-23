@@ -28,16 +28,46 @@
             <ul class="nav">
                 <li class="">
                     <div class="dropdown nav-itemd-none d-md-flex">
-                        <a href="#" class="pl-0 d-flex nav-item nav-link country-flag1" data-toggle="dropdown"
-                            aria-expanded="false">
-                            <span class="mr-0 bg-transparent avatar country-Flag align-self-center"><img
-                                    src="{{ URL::asset('assets/dashboard/img/flags/us_flag.jpg') }}"
-                                    alt="img"></span>
-                            <div class="my-auto">
-                                <strong class="my-auto ml-2 mr-2">English</strong>
-                            </div>
-                        </a>
+                        @if (App::getLocale() == 'en')
+                            <a href="#" class="pl-0 d-flex nav-item nav-link country-flag1" data-toggle="dropdown"
+                                aria-expanded="false">
+                                <span class="mr-0 bg-transparent avatar country-Flag align-self-center"><img
+                                        src="{{ URL::asset('assets/dashboard/img/flags/us_flag.jpg') }}"
+                                        alt="img"></span>
+                                <div class="my-auto">
+                                    <strong class="my-auto ml-2 mr-2">English</strong>
+                                </div>
+                            </a>
+                        @elseif (App::getLocale() == 'fr')
+                            <a href="#" class="pl-0 d-flex nav-item nav-link country-flag1" data-toggle="dropdown"
+                                aria-expanded="false">
+                                <span class="mr-0 bg-transparent avatar country-Flag align-self-center"><img
+                                        src="{{ URL::asset('assets/dashboard/img/flags/french_flag.jpg') }}"
+                                        alt="img"></span>
+                                <div class="my-auto">
+                                    <strong class="my-auto ml-2 mr-2">French</strong>
+                                </div>
+                            </a>
+                        @else
+                            <a href="#" class="pl-0 d-flex nav-item nav-link country-flag1" data-toggle="dropdown"
+                                aria-expanded="false">
+                                <span class="mr-0 bg-transparent avatar country-Flag align-self-center"><img
+                                        src="{{ URL::asset('assets/dashboard/img/flags/EG.png') }}"
+                                        alt="img"></span>
+                                <div class="my-auto">
+                                    <strong class="my-auto ml-2 mr-2">العربية</strong>
+                                </div>
+                            </a>
+                        @endif
                         <div class="dropdown-menu dropdown-menu-left dropdown-menu-arrow" x-placement="bottom-end">
+                            <a href="#" class="dropdown-item d-flex">
+                                <span class="ml-3 bg-transparent avatar align-self-center"><img
+                                        src="{{ URL::asset('assets/dashboard/img/flags/us_flag.jpg') }}"
+                                        alt="img"></span>
+                                <div class="d-flex">
+                                    <span class="mt-2">English</span>
+                                </div>
+                            </a>
                             <a href="#" class="dropdown-item d-flex ">
                                 <span class="ml-3 bg-transparent avatar align-self-center"><img
                                         src="{{ URL::asset('assets/dashboard/img/flags/french_flag.jpg') }}"
@@ -48,21 +78,14 @@
                             </a>
                             <a href="#" class="dropdown-item d-flex">
                                 <span class="ml-3 bg-transparent avatar align-self-center"><img
-                                        src="{{ URL::asset('assets/dashboard/img/flags/germany_flag.jpg') }}"
+                                        src="{{ URL::asset('assets/dashboard/img/flags/EG.png') }}"
                                         alt="img"></span>
                                 <div class="d-flex">
-                                    <span class="mt-2">Germany</span>
+                                    <span class="mt-2">العربية</span>
                                 </div>
                             </a>
-                            <a href="#" class="dropdown-item d-flex">
-                                <span class="ml-3 bg-transparent avatar align-self-center"><img
-                                        src="{{ URL::asset('assets/dashboard/img/flags/italy_flag.jpg') }}"
-                                        alt="img"></span>
-                                <div class="d-flex">
-                                    <span class="mt-2">Italy</span>
-                                </div>
-                            </a>
-                            <a href="#" class="dropdown-item d-flex">
+
+                            {{-- <a href="#" class="dropdown-item d-flex">
                                 <span class="ml-3 bg-transparent avatar align-self-center"><img
                                         src="{{ URL::asset('assets/dashboard/img/flags/russia_flag.jpg') }}"
                                         alt="img"></span>
@@ -77,7 +100,7 @@
                                 <div class="d-flex">
                                     <span class="mt-2">spain</span>
                                 </div>
-                            </a>
+                            </a> --}}
                         </div>
                     </div>
                 </li>
@@ -328,8 +351,8 @@
                             <form method="POST" action="{{ route('user.logout') }}">
                                 @csrf
 
-                                <a class="dropdown-item"
-                                    href="{{ route('user.logout') }}"onclick="event.preventDefault();
+                                <a class="dropdown-item" href="{{ route('user.logout') }}"
+                                    onclick="event.preventDefault();
                             this.closest('form').submit();">
                                     <i class="bx bx-log-out"></i> {{ __('Log Out') }}</a>
 
@@ -340,8 +363,8 @@
                             <form method="POST" action="{{ route('admin.logout') }}">
                                 @csrf
 
-                                <a class="dropdown-item"
-                                    href="{{ route('admin.logout') }}"onclick="event.preventDefault();
+                                <a class="dropdown-item" href="{{ route('admin.logout') }}"
+                                    onclick="event.preventDefault();
                             this.closest('form').submit();">
                                     <i class="bx bx-log-out"></i> {{ __('Log Out') }}</a>
 

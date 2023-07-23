@@ -21,7 +21,11 @@
 <!-- Custom Scroll bar Js-->
 <script src="{{ URL::asset('assets/dashboard/plugins/mscrollbar/jquery.mCustomScrollbar.concat.min.js') }}"></script>
 <!-- right-sidebar js -->
-<script src="{{ URL::asset('assets/dashboard/plugins/sidebar/sidebar-rtl.js') }}"></script>
+@if (App::getLocale() == 'ar')
+    <script src="{{ URL::asset('assets/dashboard/plugins/sidebar/sidebar-rtl.js') }}"></script>
+@else
+    <script src="{{ URL::asset('assets/dashboard/plugins/sidebar/sidebar.js') }}"></script>
+@endif
 <script src="{{ URL::asset('assets/dashboard/plugins/sidebar/sidebar-custom.js') }}"></script>
 <!-- Eva-icons js -->
 <script src="{{ URL::asset('assets/dashboard/js/eva-icons.min.js') }}"></script>

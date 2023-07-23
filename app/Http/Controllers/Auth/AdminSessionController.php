@@ -24,10 +24,10 @@ class AdminSessionController extends Controller
     /**
      * Display the login view.
      */
-    public function create(): View
-    {
-        return view('dashboard.auth.signin');
-    }
+    // public function create(): View
+    // {
+    //     return view('dashboard.auth.signin');
+    // }
 
     /**
      * Handle an incoming authentication request.
@@ -38,7 +38,7 @@ class AdminSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(RouteServiceProvider::ADMIN_HOME);
+        return redirect()->intended(RouteServiceProvider::ADMIN_DASHBOARD);
     }
 
 

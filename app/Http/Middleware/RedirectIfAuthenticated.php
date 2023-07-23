@@ -26,11 +26,11 @@ class RedirectIfAuthenticated
         // }
 
         if (auth('web')->check()) {
-            return redirect(RouteServiceProvider::HOME);
+            return redirect(RouteServiceProvider::USER_DASHBOARD);
         }
 
         if (auth('admin')->check()) {
-            return redirect(RouteServiceProvider::ADMIN_HOME);
+            return redirect(RouteServiceProvider::ADMIN_DASHBOARD);
         }
 
         return $next($request);

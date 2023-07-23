@@ -16,7 +16,7 @@
             <div class="col-md-6 col-lg-6 col-xl-7 d-none d-md-flex bg-primary-transparent">
                 <div class="mx-auto text-center row wd-100p">
                     <div class="mx-auto my-auto col-md-12 col-lg-12 col-xl-12 wd-100p">
-                        <img src="{{ URL::asset('assets/dashboard/img/media/login.png') }}"
+                        <img src="{{ URL::asset('assets/dashboard/img/media/login2.png') }}"
                             class="mx-auto my-auto ht-xl-80p wd-md-100p wd-xl-80p" alt="logo">
                     </div>
                 </div>

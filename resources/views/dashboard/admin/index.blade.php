@@ -1,4 +1,7 @@
 @extends('dashboard.layouts.master')
+@section('title')
+    <title>{{ __('HMS - User Dashboard') }}</title>
+@endsection
 @section('css')
     <!--  Owl-carousel css-->
     <link href="{{ URL::asset('assets/dashboard/plugins/owl-carousel/owl.carousel.css') }}" rel="stylesheet" />
