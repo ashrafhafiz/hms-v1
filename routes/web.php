@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Php\CodingController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -24,6 +25,8 @@ Route::group(
         Route::get('/', function () {
             return view('welcome');
         });
+
+        Route::get('/coding', [CodingController::class, 'index']);
 
         // Route::get('/dashboard', function () {
         //     return view('dashboard');

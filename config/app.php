@@ -85,6 +85,12 @@ return [
 
     'locale' => 'en',
 
+    'languages' => [
+        'en' => 'English',
+        'ar' => 'العربية',
+        // 'fr' => 'Français',
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
@@ -168,6 +174,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        // Manually added by Ashraf Hafiz
+        App\Providers\RepositoryServiceProvider::class,
     ])->toArray(),
 
     /*
