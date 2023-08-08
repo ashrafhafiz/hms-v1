@@ -22,9 +22,13 @@ return array (
   'Sign In' => 'Sign In',
   'Signup with Facebook' => 'Signup with Facebook',
   'Signup with Twitter' => 'Signup with Twitter',
+  'Tables' => 
+  array (
+    'Schedule' => 'Schedule',
+  ),
   'User Email' => 'User Email',
   'Welcome' => 'Welcome back',
-  'buttons' =>
+  'buttons' => 
   array (
     'Cancel' => 'Cancel',
     'Close' => 'Close',
@@ -32,7 +36,7 @@ return array (
     'Save' => 'Save',
     'Save changes' => 'Save changes',
   ),
-  'sidebar' =>
+  'sidebar' => 
   array (
     'Add Doctor' => 'Add Doctor',
     'Add Section' => 'Add Section',
@@ -40,6 +44,7 @@ return array (
     'Delete Section' => 'Delete Section',
     'Display All Doctors' => 'Display All Doctors',
     'Display All Sections' => 'Display All Sections',
+    'Display Doctors by Section' => 'Display Doctors by Section',
     'Doctors' => 'Doctors',
     'Edit Doctor' => 'Edit Doctor',
     'Edit Section' => 'Edit Section',
@@ -50,19 +55,23 @@ return array (
     'New' => 'New',
     'Sections' => 'Sections',
   ),
-  'tables' =>
+  'tables' => 
   array (
     '#' => '#',
     'Actions' => 'Actions',
+    'Active' => 'Active',
     'Available' => 'Available',
     'Created At' => 'Created At',
+    'Delete Selected' => 'Delete Selected',
     'Description' => 'Description',
     'Image' => 'Image',
+    'Inactive' => 'Inactive',
     'Modified At' => 'Modified At',
     'Name' => 'Name',
     'Not available' => 'Not available',
     'Phone' => 'Phone',
     'Price' => 'Price',
+    'Schedule' => 'Schedule',
     'Section' => 'Section',
     'Status' => 'Status',
   ),

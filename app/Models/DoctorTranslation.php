@@ -12,5 +12,9 @@ class DoctorTranslation extends Model
 
     public $timestamps = false;
 
-    protected $fillable = ['doctor_id', 'name', 'appointments'];
+    protected $fillable = [
+        'doctor_id',
+        'name',
+//        'appointments'
+    ];
 }

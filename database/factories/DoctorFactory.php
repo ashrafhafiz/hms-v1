@@ -22,11 +22,11 @@ class DoctorFactory extends Factory
             // 'email' => fake()->unique()->safeEmail(),
             'en' => [
                 'name' => fake()->name(),
-                'appointments' => fake()->randomElement(['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']),
+//                'appointments' => fake()->randomElement(['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']),
             ],
             'ar' => [
                 'name' => fake('ar_EG')->name(),
-                'appointments' => fake()->randomElement(['السبت', 'الأحد', 'الأثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة']),
+//                'appointments' => fake()->randomElement(['السبت', 'الأحد', 'الأثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة']),
             ],
             'email' => fake()->userName() . '@example.com',
             'email_verified_at' => now(),

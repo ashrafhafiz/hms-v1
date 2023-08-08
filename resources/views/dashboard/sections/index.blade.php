@@ -96,8 +96,8 @@
                                 @foreach ($sections as $section)
                                     <tr>
                                         <td>{{ $section->id }}</td>
-                                        <td>{{ $section->name }}</td>
-                                        <td>{{ $section->description }}</td>
+                                        <td><a href="">{{ $section->name }}</a></td>
+                                        <td>{{ Str::limit($section->description, 100) }}</td>
                                         <td>{{ $section->created_at->diffForHumans() }}</td>
                                         <td>{{ $section->updated_at->diffForHumans() }}</td>
                                         <td>

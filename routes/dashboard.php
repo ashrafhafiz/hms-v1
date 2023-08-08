@@ -24,6 +24,8 @@ Route::group(
             Route::resource('sections', SectionController::class);
             // Doctors
             Route::resource('doctors', DoctorController::class);
+            Route::put('doctors/{doctor}/change-password', [DoctorController::class, 'changePassword'])->name('doctor.change-password');
+            Route::put('doctors/{doctor}/change-status', [DoctorController::class, 'changeStatus'])->name('doctor.change-status');
 
             // Demos
             Route::prefix('demo')->group(function () {

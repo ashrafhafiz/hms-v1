@@ -22,9 +22,13 @@ return array (
   'Sign In' => 'تسجيل الدخول',
   'Signup with Facebook' => 'قم بالتسجيل بإستخدام فيسبوك',
   'Signup with Twitter' => 'قم بالتسجيل بإستخدام تويتر',
+  'Tables' => 
+  array (
+    'Schedule' => 'المواعيد',
+  ),
   'User Email' => 'البريد الالكتروني للمستخدم',
   'Welcome' => 'مرحبًا بعودتك',
-  'buttons' =>
+  'buttons' => 
   array (
     'Cancel' => 'إلغاء',
     'Close' => 'إغلاق',
@@ -32,7 +36,7 @@ return array (
     'Save' => 'حفظ',
     'Save changes' => 'حفظ التعديل',
   ),
-  'sidebar' =>
+  'sidebar' => 
   array (
     'Add Doctor' => 'إضافة طبيب',
     'Add Section' => 'إضافة قسم',
@@ -40,6 +44,7 @@ return array (
     'Delete Section' => 'حذف قسم',
     'Display All Doctors' => 'عرض جدول الأطباء',
     'Display All Sections' => 'عرض كل الأقسام',
+    'Display Doctors by Section' => 'عرض الأطباء بالقسم',
     'Doctors' => 'الأطباء',
     'Edit Doctor' => 'تعديل طبيب',
     'Edit Section' => 'تعديل قسم',
@@ -50,19 +55,23 @@ return array (
     'New' => 'جديد',
     'Sections' => 'الأقسام',
   ),
-  'tables' =>
+  'tables' => 
   array (
     '#' => '#',
     'Actions' => 'العمليات',
+    'Active' => 'مفعّل',
     'Available' => 'متاح',
     'Created At' => 'تاريخ الإضافة',
+    'Delete Selected' => 'حذف متعدد',
     'Description' => 'الوصف',
     'Image' => 'الصورة',
+    'Inactive' => 'غير مفعّل',
     'Modified At' => 'تاريخ التعديل',
     'Name' => 'الأسم',
     'Not available' => 'غير متاح',
     'Phone' => 'الهاتف',
     'Price' => 'قيمة الكشف',
+    'Schedule' => 'المواعيد',
     'Section' => 'القسم',
     'Status' => 'الحالة',
   ),

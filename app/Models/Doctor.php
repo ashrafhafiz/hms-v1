@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Astrotomic\Translatable\Translatable;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -14,7 +16,10 @@ class Doctor extends Model implements ContractsTranslatable
 {
     use HasFactory, SoftDeletes, Translatable;
 
-    public $translatedAttributes = ['name', 'appointments'];
+    public $translatedAttributes = [
+        'name',
+//         'appointments'
+    ];
 
     protected $dates = ['deleted_at'];
     /**
@@ -28,10 +33,11 @@ class Doctor extends Model implements ContractsTranslatable
         'phone',
         'price',
         'section_id',
+        'status',
         'email_verified_at',
         'remember_token',
         'name',
-        'appointments'
+//        'appointments'
     ];
 
     protected $table = 'doctors';
@@ -70,5 +76,10 @@ class Doctor extends Model implements ContractsTranslatable
     public function section(): BelongsTo
     {
         return $this->BelongsTo(Section::class);
+    }
+
+    public function working_days(): BelongsToMany
+    {
+        return $this->belongsToMany(WorkingDay::class,'doctor_working_day','doctor_id','working_day_id')->withTimestamps();
     }
 }

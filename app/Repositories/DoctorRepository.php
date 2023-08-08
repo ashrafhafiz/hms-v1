@@ -12,6 +12,11 @@ class DoctorRepository implements DoctorRepositoryInterface
         return Doctor::all();
     }
 
+    public function getAllDoctorsWithSchedule()
+    {
+        return Doctor::with('working_days')->get();
+    }
+
     public function getDoctorById($doctorId)
     {
         return Doctor::findOrFail($doctorId);
@@ -36,4 +41,17 @@ class DoctorRepository implements DoctorRepositoryInterface
     {
         return;
     }
+
+    public function changeDoctorPassword($doctor, $hashedPassword)
+    {
+        $doctor->password = $hashedPassword;
+        return $doctor->save();
+    }
+
+    public function changeDoctorStatus($doctor, $status)
+    {
+        $doctor->status = $status;
+        return $doctor->save();
+    }
+
 }
